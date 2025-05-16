@@ -19,7 +19,7 @@ body {
     cursor: pointer;
 }
 
-.sprites-container{
+.sprites-container {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -44,14 +44,14 @@ body {
     transform: rotateY(180deg);
 }
 
-#dogGif{
+#dogGif {
     position: absolute;
     scale: 0.4;
     bottom: 10px;
     left: 10px;
 }
 
-.sprites-container:active > #monster {
+.sprites-container:active>#monster {
     transform: scale(0.90) rotateY(190deg);
 }
 
@@ -94,25 +94,25 @@ button:hover {
 }
 
 #reset-icon {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 #reset-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: #333;
+    width: 100%;
+    height: 100%;
+    fill: #333;
 }
 
 #reset-icon:hover svg {
-  fill: #555;
+    fill: #555;
 }
 
-#coin-container{
+#coin-container {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -145,7 +145,12 @@ button:hover {
     scale: 0.7;
 }
 
-#upgrade-damage-btn, #upgrade-coin-btn, #upgrade-pet-btn, #upgrade-chestplate-btn, #upgrade-helmet-btn, #upgrade-boots-btn {
+#upgrade-damage-btn,
+#upgrade-coin-btn,
+#upgrade-pet-btn,
+#upgrade-chestplate-btn,
+#upgrade-helmet-btn,
+#upgrade-boots-btn {
     position: relative;
     border: 2px solid rgb(177, 106, 1);
     color: rgb(177, 106, 1);
@@ -160,17 +165,23 @@ button:hover {
 
 }
 
-#upgrade-damage-btn:hover, #upgrade-coin-btn:hover, #upgrade-pet-btn:hover, #upgrade-chestplate-btn:hover, #upgrade-helmet-btn:hover, #upgrade-boots-btn:hover {
+#upgrade-damage-btn:hover,
+#upgrade-coin-btn:hover,
+#upgrade-pet-btn:hover,
+#upgrade-chestplate-btn:hover,
+#upgrade-helmet-btn:hover,
+#upgrade-boots-btn:hover {
     background-color: rgba(255, 159, 15, 0.164);
     color: rgb(247, 154, 16);
 }
 
-#sword{
+#sword {
     width: 70px;
     transform: rotateZ(-90deg);
 }
 
-#coin, #companion{
+#coin,
+#companion {
     width: 70px;
 }
 
@@ -183,7 +194,7 @@ button:hover {
     gap: 20px;
 }
 
-.stats-container span{
+.stats-container span {
     color: rgb(247, 154, 16);
     font-weight: 700;
 }
@@ -200,4 +211,3 @@ button:hover {
 #armour-btn-container img {
     width: 75px;
 }
-

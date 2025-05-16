@@ -93,8 +93,7 @@ function upgradeDamageButton() {
 
         if (upgradeDamagePrice - Math.floor(upgradeDamagePrice * 1.36) < 10) {
             upgradeDamagePrice += 15;
-        }
-        else {
+        } else {
             upgradeDamagePrice += Math.floor(upgradeDamagePrice * 1.45);
         }
 
@@ -113,8 +112,7 @@ function upgradeDamageButton() {
 function upgradeCoinButton() {
     if (maxCoinUpgrade < 0) {
         maxCoinUpgrade = 0;
-    }
-    else if (maxCoinUpgrade > 0) {
+    } else if (maxCoinUpgrade > 0) {
         if (coins >= upgradeCoinPrice) {
             coins -= upgradeCoinPrice;
             updateCoinCount();
@@ -135,8 +133,7 @@ function upgradeCoinButton() {
             errorSound.currentTime = 0;
             errorSound.play();
         }
-    }
-    else {
+    } else {
         errorSound.currentTime = 0;
         errorSound.play();
     }
@@ -267,8 +264,7 @@ function nextMonster() {
     maxCoinUpgrade++;
     if (maxCoinUpgrade > 10) {
         maxCoinUpgrade = 10;
-    }
-    else if (maxCoinUpgrade < 0) {
+    } else if (maxCoinUpgrade < 0) {
         maxCoinUpgrade = 0;
     }
 
@@ -396,8 +392,7 @@ function upgradeHelmetButton() {
 
         if (upgradeHelmetPrice - Math.floor(upgradeHelmetPrice * 1.36) < 10) {
             upgradeHelmetPrice += 15;
-        }
-        else {
+        } else {
             upgradeHelmetPrice += Math.floor(upgradeHelmetPrice * 1.45);
         }
 
@@ -427,8 +422,7 @@ function upgradeChestplateButton() {
 
         if (upgradeChestplatePrice - Math.floor(upgradeChestplatePrice * 1.36) < 10) {
             upgradeChestplatePrice += 15;
-        }
-        else {
+        } else {
             upgradeChestplatePrice += Math.floor(upgradeChestplatePrice * 1.45);
         }
 
@@ -458,8 +452,7 @@ function upgradeBootsButton() {
 
         if (upgradeBootsPrice - Math.floor(upgradeBootsPrice * 1.36) < 10) {
             upgradeBootsPrice += 15;
-        }
-        else {
+        } else {
             upgradeBootsPrice += Math.floor(upgradeBootsPrice * 1.45);
         }
 
@@ -573,17 +566,17 @@ backgroundSound.loop = true;
 backgroundSound.volume = 0.2;
 
 window.addEventListener("load", () => {
-  backgroundSound.play().catch(() => {
+    backgroundSound.play().catch(() => {
 
-    alert("Autoplay blocked. Waiting for user action...");
-    
-    const resumeAudio = () => {
-      backgroundSound.play();
-      document.removeEventListener("click", resumeAudio);
-      document.removeEventListener("keydown", resumeAudio);
-    };
+        alert("Autoplay blocked. Waiting for user action...");
 
-    document.addEventListener("click", resumeAudio);
-    document.addEventListener("keydown", resumeAudio);
-  });
+        const resumeAudio = () => {
+            backgroundSound.play();
+            document.removeEventListener("click", resumeAudio);
+            document.removeEventListener("keydown", resumeAudio);
+        };
+
+        document.addEventListener("click", resumeAudio);
+        document.addEventListener("keydown", resumeAudio);
+    });
 });

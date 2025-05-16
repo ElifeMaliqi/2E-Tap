@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Tap Game</title>
 
-  <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Tap Game</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Tap the Monster!</h1>
+    <h1>Tap the Monster!</h1>
 
-  <div class="sprites-container">
-    <img id="player" src="./sprites/player/frame1-Photoroom.png" alt="">
-    <img id="dogGif" src="./sprites/companion/frame0-Photoroom.png" alt="Dog Animation" width="300">
-    <img id="monster" src="./sprites/monsters/monster1-Photoroom.png" alt="Monster">
-  </div>
-  
-  <div id="health-bar">
-    <div id="health"></div>
-  </div>
-  
-  <div id="info">HP: <span id="hp-text">100 / 100</span></div>
+    <div class="sprites-container">
+        <img id="player" src="./sprites/player/frame1-Photoroom.png" alt="">
+        <img id="dogGif" src="./sprites/companion/frame0-Photoroom.png" alt="Dog Animation" width="300">
+        <img id="monster" src="./sprites/monsters/monster1-Photoroom.png" alt="Monster">
+    </div>
 
-  <div id="reset-icon">
-    <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0 1 1 0 2.5 2.5)">
-        <path d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8"/>
-        <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"/>
-      </g>
-    </svg>
-  </div>
+    <div id="health-bar">
+        <div id="health"></div>
+    </div>
 
-  <div id="coin-container">
-    <img src="icon/coin-Photoroom.png" alt="">
-    <p id="coin-count">0 coins</p>
-  </div>
+    <div id="info">HP: <span id="hp-text">100 / 100</span></div>
 
-  <div id="armour-btn-container">
-    <button id="upgrade-helmet-btn" onclick="upgradeHelmetButton()"><img id="helmet" src="./icon/armour/helmets/helmet1-Photoroom.png" alt=""><b>(250 coins)</b></button>
-    <button id="upgrade-chestplate-btn" onclick="upgradeChestplateButton()"><img id="chestplate" src="./icon/armour/chestplate/chestplate1-Photoroom.png" alt=""><b>(450 coins)</b></button>
-    <button id="upgrade-boots-btn" onclick="upgradeBootsButton()"><img id="boots" src="./icon/armour/boots/boots1-Photoroom.png" alt=""><b>(200 coins)</b></button>
-  </div>
+    <div id="reset-icon">
+        <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="matrix(0 1 1 0 2.5 2.5)">
+                <path d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8" />
+                <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)" />
+            </g>
+        </svg>
+    </div>
 
-  <div id="upgrade-btn-container">
-    <button id="upgrade-damage-btn" onclick="upgradeDamageButton()"><img id="sword" src="./icon/tools/sword-Photoroom.png" alt=""><b>(20 coins)</b></button>
-    <button id="upgrade-coin-btn" onclick="upgradeCoinButton()"><span> max : 0 </span><img id="coin" src="./icon/tools/pouch-Photoroom.png" alt=""><b>(10 coins)</b></button>
-    <button id="upgrade-pet-btn" onclick="upgradeCompanionButton()"><img id="companion" src="./icon/tools/pet-Photoroom.png" alt=""><b>(1030 coins)</b></button>
-  </div>
+    <div id="coin-container">
+        <img src="icon/coin-Photoroom.png" alt="">
+        <p id="coin-count">0 coins</p>
+    </div>
 
-  <div class="stats-container">
-      <p id="damage-text">Damage: <span id="damage">10</span></p>
-      <p id="coin-text">Added Coins: <span id="coin-multiplier">10</span></p>
-      <p id="companion-text">Companion Damage: <span id="companion-level">0</span></p>
-  </div>
+    <div id="armour-btn-container">
+        <button id="upgrade-helmet-btn" onclick="upgradeHelmetButton()"><img id="helmet" src="./icon/armour/helmets/helmet1-Photoroom.png" alt=""><b>(250 coins)</b></button>
+        <button id="upgrade-chestplate-btn" onclick="upgradeChestplateButton()"><img id="chestplate" src="./icon/armour/chestplate/chestplate1-Photoroom.png" alt=""><b>(450 coins)</b></button>
+        <button id="upgrade-boots-btn" onclick="upgradeBootsButton()"><img id="boots" src="./icon/armour/boots/boots1-Photoroom.png" alt=""><b>(200 coins)</b></button>
+    </div>
 
-  <script src="main.js"></script>
+    <div id="upgrade-btn-container">
+        <button id="upgrade-damage-btn" onclick="upgradeDamageButton()"><img id="sword" src="./icon/tools/sword-Photoroom.png" alt=""><b>(20 coins)</b></button>
+        <button id="upgrade-coin-btn" onclick="upgradeCoinButton()"><span> max : 0 </span><img id="coin" src="./icon/tools/pouch-Photoroom.png" alt=""><b>(10 coins)</b></button>
+        <button id="upgrade-pet-btn" onclick="upgradeCompanionButton()"><img id="companion" src="./icon/tools/pet-Photoroom.png" alt=""><b>(1030 coins)</b></button>
+    </div>
+
+    <div class="stats-container">
+        <p id="damage-text">Damage: <span id="damage">10</span></p>
+        <p id="coin-text">Added Coins: <span id="coin-multiplier">10</span></p>
+        <p id="companion-text">Companion Damage: <span id="companion-level">0</span></p>
+    </div>
+
+    <script src="main.js"></script>
 
 </body>
+
 </html>
