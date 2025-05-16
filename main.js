@@ -44,7 +44,7 @@ let displayCompanionBtn = 'flex';
 
 let upgradeHelmetPrice = 250;
 let upgradeChestplatePrice = 450;
-let upgradeBootsPrice = 0;
+let upgradeBootsPrice = 200;
 
 let helmetImgContent = `(${upgradeHelmetPrice} coins)`;
 let chestplateImgContent = `(${upgradeChestplatePrice} coins)`;
