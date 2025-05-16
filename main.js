@@ -42,8 +42,8 @@ let companionDamage = 0;
 
 let displayCompanionBtn = 'flex';
 
-let upgradeHelmetPrice = 0;
-let upgradeChestplatePrice = 0;
+let upgradeHelmetPrice = 250;
+let upgradeChestplatePrice = 450;
 let upgradeBootsPrice = 0;
 
 let helmetImgContent = `(${upgradeHelmetPrice} coins)`;
